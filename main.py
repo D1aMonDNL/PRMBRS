@@ -70,7 +70,7 @@ def num_range_prime():
 def prime_app():
     os.system('cls')
     proceed = False
-    print("Source code written and designed by - D1aMonD_NL")
+    print("Source code written and designed by - D1aMonDNL")
     print("\n")
     print("Choose the function of choice.")
     print("1. Print all the prime numbers within a range.")
