@@ -1,5 +1,7 @@
 import os
 
+#all code is written by D1aMonDNL
+
 def return_home():
     os.system('cls')
     prime_app()
