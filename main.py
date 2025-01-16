@@ -6,14 +6,14 @@ def return_home():
     os.system('cls')
     prime_app()
 
+
 def num_input_prime():
-    num = float(0)
-    half_num = num / 2
     starter = 0
     is_prime = False
     while True:
         while True:
             num = float(input("Enter number to check if it's a prime number. Enter 0 to return to the home screen. "))
+            half_num = num / 2
             if num == 0:
                 return_home()
             while half_num > starter:
@@ -32,7 +32,6 @@ def num_input_prime():
             else:
                 print("Inputted number isn't a prime number.")
             starter = 0
-            half_num = num / 2
 
 
 def num_range_prime():
@@ -67,24 +66,32 @@ def num_range_prime():
         os.system('cls')
         return_home()
 
+
 def prime_app():
     os.system('cls')
     proceed = False
-    print("Source code written and designed by - D1aMonDNL")
+    print("Source code written and designed by - D1aMonD_NL")
     print("\n")
     print("Choose the function of choice.")
     print("1. Print all the prime numbers within a range.")
     print("2. Check if number is a prime number.")
+    print("3. Exit the program.")
     while not proceed:
-        choice = int(input())
-        if choice == 1:
-            num_range_prime()
-            proceed = True
-        elif choice == 2:
-            num_input_prime()
-            proceed = True
-        elif choice > 2:
-            print("Inputted number is invalid, try again.")
+        try:
+            choice = int(input())
+            if choice == 1:
+                num_range_prime()
+                proceed = True
+            elif choice == 2:
+                num_input_prime()
+                proceed = True
+            elif choice == 3:
+                exit()
+            elif choice > 3:
+                print("Inputted number is invalid, try again.")
+                proceed = False
+        except ValueError:
+            print("Inputted character is not a number, try again.")
             proceed = False
 
 
