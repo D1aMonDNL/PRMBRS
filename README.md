@@ -1,4 +1,4 @@
-# Prime checker
+# PRMBRS
 simple application to check for prime numbers
 
 # Todo-list
